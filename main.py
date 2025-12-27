@@ -94,16 +94,57 @@ st.markdown("""
 
 
 # ---------------- Sidebar ----------------
-st.sidebar.title("🚀 Project Team")
-st.sidebar.info("""
-**Developed by:**
-- Abdalla Hassan  
-- Mohamed Sarhan  
-- Ahmed Reda  
-- Mariem Ahmed   
-- Rawan Ahmed
-- Ziad Saad  
-""")
+with st.sidebar:
+    
+    st.markdown("""
+        
+            <style>
+            [data-testid="stSidebar"] {
+                background: linear-gradient(to bottom, #0f0c29, #1a1a2e);
+                border-right: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .sidebar-title {
+                color: #00d2ff;
+                text-align: center;
+                font-family: 'Trebuchet MS', sans-serif;
+                letter-spacing: 2px;
+                margin-top: 20px;
+            }
+            .sidebar-subtext {
+                color: rgba(255, 255, 255, 0.5);
+                text-align: center;
+                font-size: 0.8rem;
+                margin-bottom: 30px;
+            }
+        </style>
+        <h2 class="sidebar-title">SYSTEM ENGINE</h2>
+        <p class="sidebar-subtext">NLP-Analysis</p>
+    """, unsafe_allow_html=True)
+
+    
+    st.image("https://cdn-icons-png.flaticon.com/512/3658/3658959.png", width=120)
+
+    st.markdown("---")
+
+    
+    st.markdown("""
+        <div style='padding: 10px; border-radius: 10px; background: rgba(255,255,255,0.03);'>
+            <p style='color: #00d2ff; font-size: 14px; margin-bottom: 5px;'>📡 ENGINE STATUS</p>
+            <p style='color: #00ff88; font-size: 12px;'>● OPERATIONAL</p>
+            <br>
+            <p style='color: #00d2ff; font-size: 14px; margin-bottom: 5px;'>🧠 MODEL</p>
+            <p style='color: white; font-size: 12px;'>Weighted Cosine Similarity </p>
+            <br>
+            <p style='color: #00d2ff; font-size: 14px; margin-bottom: 5px;'>📊 DATASET</p>
+            <p style='color: white; font-size: 12px;'>TMDB API Scraping</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("---")
+    
+    # Bottom accent
+    st.caption("AI-Powered Recommendations")
+
 
 # ---------------- Title ----------------
 st.markdown("<h1 style='text-align: center; color: white;'>🎬 Movie Recommendation System</h1>", unsafe_allow_html=True)
@@ -178,4 +219,5 @@ if run:
                                 </div>
                             </div>
                         </div>
+
                     """, unsafe_allow_html=True)
